@@ -18,11 +18,16 @@ This project implements a GraphQL-powered NFT Metadata & Analytics Service, inde
 
 ## Preview
 
-### Dashboard with live sales
-![NFT Dashboard](./assets/screenshot1.png)
-
-### Live Sales Sidebar
-![Filter Dashboard](./assets/screenshot2.png)
+<div style="display: flex; justify-content: space-around;">
+  <div style="text-align: center;">
+    <img src="./assets/screenshot1.png" width="100%" alt="NFT Dashboard">
+    <p>Dashboard with live sales sidebar</p>
+  </div>
+  <div style="text-align: center;">
+    <img src="./assets/screenshot2.png" width="100%" alt="Filtered Dashboard">
+    <p>Filtered dashboard sidebar</p>
+  </div>
+</div>
 
 ## Tech Stack
 
