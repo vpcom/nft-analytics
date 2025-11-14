@@ -20,12 +20,9 @@ builder.Services.AddCors(options =>
       });
 });
 
-// DB
-builder.Services.AddDbContext<AppDbContext>(opt =>
-    opt.UseSqlite("Data Source=nfts.db"));
-
-// GraphQL
+// Registering classes to container
 builder.Services
+    .AddDbContext<AppDbContext>(opt => opt.UseSqlite("Data Source=nfts.db"))
     .AddGraphQLServer()
     .AddQueryType<Query>()
     .AddTypeExtension<CollectionQuery>()
@@ -34,7 +31,7 @@ builder.Services
 
 var app = builder.Build();
 
-// Ensure database exists & seed a few NFTs
+// Ensure database exists & seed NFTs
 using (var scope = app.Services.CreateScope())
 {
   var db = scope.ServiceProvider.GetRequiredService<AppDbContext>();
